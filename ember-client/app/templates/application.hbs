@@ -1,0 +1,11 @@
+<!-- application.hbs template -->
+
+<h2 id="title">Welcome to Ember.js</h2>
+
+{{#if session.isAuthenticated}}
+	<a {{ action 'invalidateSession' }}>Logout</a>
+{{else}}
+	<a {{ action 'sessionRequiresAuthentication' }}>Login</a>
+{{/if}}
+
+{{outlet}}
